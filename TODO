@@ -1,0 +1,20 @@
+Todos!
+- hook up github
+
+Backend
+- choose database (postgres)
+- design database model
+  - ability to tag recipes
+  - ability to add notes to recipes
+
+Next:
+- set up flask
+- set up swagger
+- Create API endpoints
+- write parsed recipes to database
+- write API endpoints to pull recipes
+
+Frontend
+- setup electron
+- show all recipes
+- brainstorm new features
