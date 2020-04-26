@@ -1,3 +1,5 @@
+### Postgres Instructions ###
+
 Start Postgres: pg_ctl -D /usr/local/var/postgres start
 Connect to postgres: psql recipe_book
 
