@@ -1,13 +1,10 @@
 Todos!
-- hook up github
+- host something on Heroku
+- add linting (eslint)
+- add formatting (prettier, black)
+- hook these up to pre-commit
 
 Backend
-- choose database (postgres)
-- design database model
-  - ability to tag recipes
-  - ability to add notes to recipes
-
-Next:
 - set up flask
 - set up swagger
 - Create API endpoints
