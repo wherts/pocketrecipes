@@ -1,17 +1,22 @@
 Todos!
-- host something on Heroku
+- add/configure formatting (prettier, black)
+- Hook these up to pre-commit as well as in vscode
+- Create tables from sqlalchemy models
+- Run alembic migrations on deploy to Heroku
+- Set up API endpoint for parsing and serving back recipes
 - add linting (eslint)
-- add formatting (prettier, black)
-- hook these up to pre-commit
 
 Backend
 - set up flask
-- set up swagger
+- set up swagger -> do I need?
 - Create API endpoints
 - write parsed recipes to database
 - write API endpoints to pull recipes
+- set up authentication and logins
+- Add users db table
 
 Frontend
-- setup electron
+- Learn some Vue
+- set up webpack and eslint
 - show all recipes
 - brainstorm new features

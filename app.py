@@ -12,9 +12,11 @@ if ENV == "dev":
     ] = "postgresql://wesleyherts:12345@localhost/lexus"
 else:
     app.debug = False
-    app.config[
-        "SQLALCHEMY_DATABASE_URI"
-    ] = "postgres://ivzsszehsnajzh:b1de725ca318ff69cc600586d81988296450a097711bc3d52485416a8b69a032@ec2-52-71-55-81.compute-1.amazonaws.com:5432/d6823qnacdvbos"
+    app.config["SQLALCHEMY_DATABASE_URI"] = (
+        "postgres://ivzsszehsnajzh:"
+        + "b1de725ca318ff69cc600586d81988296450a097711bc3d52485416a8b69a032"
+        + "@ec2-52-71-55-81.compute-1.amazonaws.com:5432/d6823qnacdvbos"
+    )
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
@@ -48,11 +50,14 @@ def submit():
         rating = request.form["rating"]
         comments = request.form["comments"]
         if not customer or not dealer:
-            return render_template("index.html", message="Please enter required fields")
+            return render_template(
+                "index.html", message="Please enter required fields"
+            )
 
         if (
-            db.session.query(Feedback).filter(Feedback.customer == customer).count()
-            == 0
+            not db.session.query(Feedback)
+            .filter(Feedback.customer == customer)
+            .count()
         ):
             data = Feedback(customer, dealer, rating, comments)
             db.session.add(data)
