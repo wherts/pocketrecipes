@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 url = "https://www.bonappetit.com/recipe/salt-and-pepper-fish"
 # url = "https://www.bonappetit.com/recipe/adult-mac-and-cheese"
 page = requests.get(url)
-
 soup = BeautifulSoup(page.content, "html.parser")
 
 # get ingredients
