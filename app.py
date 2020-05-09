@@ -37,7 +37,7 @@ class Feedback(db.Model):
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("naz.html")
 
 
 @app.route("/submit", methods=["POST"])
