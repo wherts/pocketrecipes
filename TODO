@@ -1,11 +1,12 @@
-Todos!
-- add/configure formatting (prettier, black)
-- Hook these up to pre-commit as well as in vscode
-- Create tables from sqlalchemy models
-- Run alembic migrations on deploy to Heroku
+Todos - Now
 - Set up API endpoint for parsing and serving back recipes
+- Run alembic migrations on deploy to Heroku
 - add linting (eslint)
+- set up logins and auth
+- do something with settings and secrets
+- uninstall plain SQLAlchemy
 
+Backlog
 Backend
 - set up flask
 - set up swagger -> do I need?
