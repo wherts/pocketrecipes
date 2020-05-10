@@ -17,6 +17,7 @@ Backend
 - Add users db table
 
 Frontend
+- Set up hot-reloading for the browser
 - Learn some Vue
 - set up webpack and eslint
 - show all recipes

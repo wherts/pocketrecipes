@@ -1,4 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+
+import engine
 
 app = Flask(__name__)
 
@@ -22,31 +24,13 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 @app.route("/")
 def index():
-    return render_template("naz.html")
+    return render_template("index.html")
 
 
 @app.route("/submit", methods=["POST"])
 def submit():
-    pass
-    # if request.method == "POST":
-    #     customer = request.form["customer"]
-    #     dealer = request.form["dealer"]
-    #     rating = request.form["rating"]
-    #     comments = request.form["comments"]
-    #     if not customer or not dealer:
-
-
-#         return render_template("index.html", message="Please enter required
-
-#     if not db.session.query(Feedback).filter(Feedback.customer == customer
-#         data = Feedback(customer, dealer, rating, comments)
-#         db.session.add(data)
-#         db.session.commit()
-
-#         return render_template("success.html")
-#     return render_template(
-#         "index.html", message="You have already submitted feedback"
-#     )
+    recipe_title = engine.scrape_recipe(request.form["recipe_source"])
+    return render_template("index.html", message=recipe_title)
 
 
 if __name__ == "__main__":
