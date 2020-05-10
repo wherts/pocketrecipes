@@ -1,6 +1,9 @@
 ### Postgres Instructions ###
 
 Start Postgres: pg_ctl -D /usr/local/var/postgres start
-Connect to postgres: psql recipe_book
+Connect to postgres: psql pocketrecipes
+
+To run bash on heroku:
+heroku run bash -a pocketrecipes (can manually migrate the db on deploy)
 
 

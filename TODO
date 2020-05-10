@@ -1,10 +1,9 @@
 Todos - Now
 - Set up API endpoint for parsing and serving back recipes
 - Run alembic migrations on deploy to Heroku
-- add linting (eslint)
 - set up logins and auth
 - do something with settings and secrets
-- uninstall plain SQLAlchemy
+- figure out how to automatically run alembic migrations on deploy
 
 Backlog
 Backend
@@ -17,6 +16,7 @@ Backend
 - Add users db table
 
 Frontend
+- add eslint
 - Set up hot-reloading for the browser
 - Learn some Vue
 - set up webpack and eslint
